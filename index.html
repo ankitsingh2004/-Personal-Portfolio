@@ -36,7 +36,7 @@
 
         <div class="header-text">
           <p>UI/UX Designer</p>
-          <h1>Hi, I 'm <span>Ankit</span><br />Singh From India</h1>
+          <h1>Hi, I 'm <span>Ankit</span><br />Singh From India</span></h1>
         </div>
       </div>
     </div>
@@ -61,13 +61,13 @@
             </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
+              <p class="tab-links active-link" onclick="opentab('skills', event)">
                 Skills
               </p>
-              <p class="tab-links" onclick="opentab('experience')">
+              <p class="tab-links" onclick="opentab('experience', event)">
                 Experience
               </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('education', event)">Education</p>
             </div>
 
             <div class="tab-contains active-tab" id="skills">
@@ -187,7 +187,7 @@
               <h3>Social Media App</h3>
               <p>
                 The App connects you to the talented people around the World.
-                Dowload it from play Store.
+                Download it from play Store.
               </p>
               <a href="#"><i class="fas fa-arrow-right"></i></a>
             </div>
@@ -199,7 +199,7 @@
               <h3>Music App</h3>
               <p>
                 The App connects you to the talented people around the World.
-                Dowload it from play Store.
+                Download it from play Store.
               </p>
               <a href="#"><i class="fas fa-arrow-right"></i></a>
             </div>
@@ -211,7 +211,7 @@
               <h3>Apple mobile Phone</h3>
               <p>
                 The App connects you to the talented people around the World.
-                Dowload it from play Store.
+                Download it from play Store.
               </p>
               <a href="#"><i class="fas fa-arrow-right"></i></a>
             </div>
@@ -257,7 +257,7 @@
     </div>
      </div>
 
-    <script src="anki.js"></script>
+    <script src="script.js"></script>
 
 <!--     
 // ------------------submit the form in the google sheet ---------------- -->
@@ -278,7 +278,22 @@
         form.reset()
 
       })
-      .catch(error => console.error('Error!', error.message))
+  //     .catch(error => console.error('Error!', error.message))
+//   form.addEventListener('submit', e => {
+//   e.preventDefault()
+//   msg.innerHTML = "Sending message..."
+//   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+//     .then(response => {
+//       msg.innerHTML = "Message sent successfully!"
+//       setTimeout(() => msg.innerHTML = "", 5000)
+//       form.reset()
+//     })
+//     .catch(error => {
+//       msg.innerHTML = "Error sending message!"
+//       console.error('Error!', error.message)
+//     })
+// })
+
   })
 </script>
   </body>

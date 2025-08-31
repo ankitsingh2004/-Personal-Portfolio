@@ -1,300 +1,203 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="Style.css" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="pr.css" />
 
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  </head>
-    
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="Logo.jpeg" class="logo"/>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="bi bi-x-circle-fill" id="closeMenu"></i>
+        </ul>
+        <i class="bi bi-list" id="openMenu"></i>
+      </nav>
 
-
-    <script
-      src="https://kit.fontawesome.com/c4254e24e8.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Personal Portfolio Website</title>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="Logo.jpeg" class="logo" />
-          <ul id ="sidemenu">
-            <li><a href="#header"> Home </a></li>
-            <li><a href="#about"> About </a></li>
-            <li><a href="#services"> Service</a></li>
-            <li><a href="#portfolio">Portfolio </a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="bi bi-x-circle-fill" onclick="closemenu()"></i>
-          </ul>
-          <i class="bi bi-list" onclick="openmenu()"></i>
-        </nav>
-
-        <div class="header-text">
-          <p>UI/UX Designer</p>
-          <h1>Hi, I 'm <span>Ankit</span><br />Singh From India</span></h1>
-        </div>
+      <div class="header-text">
+        <p id="typewriter"></p>
+        <h1>Hi, I'm <span>Ankit</span><br/>Singh From India</h1>
       </div>
     </div>
+  </div>
 
-    <!-- ----------About------------ -->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="Bak.jpg" />
+  <!-- About -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="Bak.jpg"/>
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I am Ankit Singh Rawat from Uttarakhand, currently pursuing BCA at GEHU Dehradun.
+            Learning Web Development and DSA with C++. Positive thinker and always motivated.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" data-tab="skills">Skills</p>
+            <p class="tab-links" data-tab="experience">Experience</p>
+            <p class="tab-links" data-tab="education">Education</p>
           </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>
-              I am Ankit Singh Rawat. I am from Uttarakhand. I am currently
-              pursuing BCA , from Graphic Era Hill University, Dehradun. I am
-              learning Web Development and, DSA with C++. I believe in hard work
-              and trust in myself. I am a fresher yet., And I will do hard work
-              and I can Do it Everything. My hobbies Are playing cricket,
-              Listening Music I am positive Thinker and I am Always Motivated
-              and positive.
-            </p>
 
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills', event)">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience', event)">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education', event)">Education</p>
-            </div>
+          <div class="tab-contains active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br/>Responsive & dynamic websites using HTML, CSS, JS, React.</li>
+              <li><span>Data Structures</span><br/>Problem solving with optimized solutions.</li>
+              <li><span>UI/UX Design</span><br/>Designing intuitive interfaces with Figma & Adobe XD.</li>
+            </ul>
+          </div>
 
-            <div class="tab-contains active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Web Development</span><br />
-                  Proficient in building responsive and dynamic websites using HTML, CSS, JavaScript, and frameworks like React.
-                </li>
-                <li>
-                  <span>Data Structures & Algorithms</span><br />
-                  Strong understanding of problem-solving techniques and algorithms to optimize software solutions.
-                </li>
-                <li>
-                  <span>UI/UX Design</span><br />
-                  Designing intuitive and user-friendly web/app interfaces with tools like Figma and Adobe XD.
-                </li>
-              </ul>
-            </div>
-            
+          <div class="tab-contains" id="experience">
+            <ul>
+              <li><span>2024 - Current</span><br/>Learning Web Dev & DSA</li>
+              <li><span>2025</span><br/>Academic Projects at GEHU</li>
+              <li><span>2025</span><br/>Personal projects & LeetCode</li>
+              <li><span>2026</span><br/>Planning internship</li>
+            </ul>
+          </div>
 
-            <!-- For the Experience -->
-            <div class="tab-contains" id="experience">
-              <ul>
-                <li>
-                  <span>2024 - Current</span><br />
-                  Learning Web Development and DSA as part of my journey to master programming and application development.
-                </li>
-                <li>
-                  <span>2025</span><br />
-                  Led academic projects at Graphic Era Hill University, focusing on web application development and collaborative teamwork.
-                </li>
-                <li>
-                  <span>2025</span><br />
-                  Worked on personal projects, including creating responsive websites and solving coding challenges on LeetCode.
-                </li>
-                <li>
-                  <span>2026</span><br />
-                  Planning to pursue an internship in software or web development to gain real-world experience and industry insights.
-                </li>
-              </ul>
-            </div>            
-            <!-- for the Education  -->
-
-            <div class="tab-contains" id="education">
-              <ul>
-                <li>
-                  <span>2021</span><br />
-                  10th from UK Board
-                </li>
-                <li>
-                  <span>2023</span><br />
-                  12th From UK Board
-                </li>
-                <!-- <li><span>2014 </span><br> Building Android/iOS</li> -->
-                <li><span> 2026 </span> BCA from GEHU DEHRADUN Uttarakhand</li>
-              </ul>
-            </div>
+          <div class="tab-contains" id="education">
+            <ul>
+              <li><span>2021</span><br/>10th from UK Board</li>
+              <li><span>2023</span><br/>12th from UK Board</li>
+              <li><span>2026</span><br/>BCA from GEHU Dehradun</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- ------------------Services --------------- -->
-
-    <div id="services">
-      <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <!-- Find from the Fontawesome website icon  -->
-            <!-- This is the services icon title  -->
-            <i class="fas fa-code"></i>
-            <h2>Web Development</h2>
-            <p>
-              I am currently learning web development, focusing on creating responsive and
-              dynamic websites. This journey includes mastering front-end technologies like
-              HTML, CSS, JavaScript, and exploring frameworks like React and Bootstrap.
-            </p>
-            <a href="#"> Learn More </a>
-          </div>
-
-          <div>
-            <i class="fas fa-crop"></i>
-            <h2>Data Structures & Algorithms</h2>
-            <p>
-              Alongside web development, I am enhancing my problem-solving skills by studying
-              data structures and algorithms. This includes understanding core concepts like
-              arrays, linked lists, stacks, queues, trees, and graphs, while also solving
-              coding challenges on platforms like LeetCode and HackerRank.
-            </p>
-            <a href="#"> Learn More </a>
-          </div>
-
-          <div>
-            <i class="fab fa-app-store-ios"></i>
-            <h2>My Academic Journey</h2>
-            <p>I am a BCA (Bachelor of Computer Applications) student at Graphic Era Hill
-                University, currently in my 2nd year (4th semester). My studies involve subjects
-               like programming, databases, and software development, all of which are shaping
-               my skills for a successful career in technology.
-            </p>
-            <a href="#"> Learn More </a>
-          </div>
+  <!-- Services -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fas fa-code"></i>
+          <h2>Web Development</h2>
+          <p>Building responsive websites with HTML, CSS, JS, React.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fas fa-crop"></i>
+          <h2>DSA</h2>
+          <p>Problem solving with arrays, linked lists, stacks, trees.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fab fa-app-store-ios"></i>
+          <h2>Academics</h2>
+          <p>BCA with focus on programming, DB, and software dev.</p>
+          <a href="#">Learn More</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- ------------Portfolio-------------- -->
-
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="work1.jpg" />
-            <div class="layer">
-              <h3>Social Media App</h3>
-              <p>
-                The App connects you to the talented people around the World.
-                Download it from play Store.
-              </p>
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="work">
-            <img src="work2.jpg" />
-            <div class="layer">
-              <h3>Music App</h3>
-              <p>
-                The App connects you to the talented people around the World.
-                Download it from play Store.
-              </p>
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="work">
-            <img src="work3.webp" />
-            <div class="layer">
-              <h3>Apple mobile Phone</h3>
-              <p>
-                The App connects you to the talented people around the World.
-                Download it from play Store.
-              </p>
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
+  <!-- Portfolio -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="work1.jpg"/>
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>Connect with people worldwide.</p>
+            <a href="#"><i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        <a href="#" class ="btn">See more </a>
+        <div class="work">
+          <img src="work2.jpg"/>
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>Discover & stream music.</p>
+            <a href="#"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="work3.webp"/>
+          <div class="layer">
+            <h3>Apple Mobile Phone</h3>
+            <p>Elegant design, powerful features.</p>
+            <a href="#"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="bi bi-send-fill"></i> as5806801@gmail.com</p>
+          <p><i class="bi bi-telephone-fill"></i> 8077150000</p>
+          <div class="social-icons">
+            <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="https://github.com/ankitsingh2004"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/ankit-singh-55154b311/"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <a href="Resume.pdf" download class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form name="submit-to-google-sheet" id="contactForm">
+            <input type="text" name="Name" placeholder="Your name" required>
+            <input type="email" name="Email" placeholder="Your email" required>
+            <textarea name="Message" placeholder="Your message" rows="6" required></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
       </div>
     </div>
-
-    <!-- --------CONTACT-------- -->
-     <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class ="sub-title"> Contact Me</h1>
-            <p><i class="bi bi-send-fill"></i>as5806801@gmail.com</p>
-            <p> <i class="bi bi-telephone-fill"></i>8077150000</p>
-            <div class="social-icons">
-              <a href="https://facebook.com"><i class="bi bi-facebook"></i> </a>
-              <a href=""><i class="bi bi-instagram"></i></i> </a>
-              <a href=""><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/ankit-singh-55154b311/"><i class="bi bi-linkedin"></i></a>
-            </div>
-            <a href="Resume.pdf" download class="btn btn2">Download CV</a>
-          </div>
-          
-          <div class="contact-right">
-            <form name ="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your name" required>
-              <input type="email" name="Email" placeholder="Your email" required>
-              <textarea name="Message" placeholder="Your Message" rows="6" required></textarea> 
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-
-            <span id ="msg"></span>
-          </div>
-          
-        </div>
-      </div>
     <div class="copyright">
-      <p>© 2025 Ankit. Crafted with <i class="bi bi-heart-fill"></i> and dedication.</p>
-
+      <p>© 2025 Ankit. Crafted with <i class="bi bi-heart-fill"></i></p>
     </div>
-     </div>
+  </div>
 
-    <script src="script.js"></script>
-
-<!--     
-// ------------------submit the form in the google sheet ---------------- -->
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwE45AkPBuftwaRZqPePypA9FmZT2kgB9jx8lsyg1yLlUUncBdjqRLK586eZvgGdnwzdw/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg=document.getElementById("msg");
+  <script src="anki.js"></script>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzeo8tzK8aTT5CGrrcaDuFi9aVi35B8ljzrS-AoZNAic3DP6zsAfpZpZ1dXPAz99QzK/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
+    e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response =>{
-        msg.innerHTML="Message sent Successfully"
-        setTimeout(function(){
-          msg.innerHTML=""
-        },5000);
-        form.reset()
-
+      .then(response => {
+        msg.innerHTML = "Message sent successfully ✅";
+        setTimeout(() => msg.innerHTML = "", 5000);
+        form.reset();
       })
-  //     .catch(error => console.error('Error!', error.message))
-//   form.addEventListener('submit', e => {
-//   e.preventDefault()
-//   msg.innerHTML = "Sending message..."
-//   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-//     .then(response => {
-//       msg.innerHTML = "Message sent successfully!"
-//       setTimeout(() => msg.innerHTML = "", 5000)
-//       form.reset()
-//     })
-//     .catch(error => {
-//       msg.innerHTML = "Error sending message!"
-//       console.error('Error!', error.message)
-//     })
-// })
-
-  })
+      .catch(error => {
+        msg.innerHTML = "Something went wrong ❌";
+        console.error('Error!', error.message);
+      });
+  });
 </script>
-  </body>
-</html>
+
+
+</body>
+</html>    

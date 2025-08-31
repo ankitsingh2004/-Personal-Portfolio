@@ -1,21 +1,45 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontains = document.getElementsByClassName("tab-contains");
+// ===== Mobile Menu =====
+const sidemenu = document.getElementById("sidemenu");
+document.getElementById("openMenu").addEventListener("click", () => sidemenu.style.right = "0");
+document.getElementById("closeMenu").addEventListener("click", () => sidemenu.style.right = "-200px");
 
-function opentab(tabname, event) {
-    for (let tabl of tablinks) {
-        tabl.classList.remove("active-link");
+// ===== Tabs =====
+const tabLinks = document.querySelectorAll(".tab-links");
+const tabContents = document.querySelectorAll(".tab-contains");
+
+tabLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    tabLinks.forEach(l => l.classList.remove("active-link"));
+    tabContents.forEach(c => c.classList.remove("active-tab"));
+
+    this.classList.add("active-link");
+    document.getElementById(this.dataset.tab).classList.add("active-tab");
+  });
+});
+
+// ===== Typewriter Effect =====
+function typeWriterEffect(element, text, speed = 100) {
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
     }
-    for (let tabcont of tabcontains) {
-        tabcont.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+  }
+  typing();
 }
 
-var sidemenu = document.getElementById("sidemenu");
-function openmenu() {
-    sidemenu.style.right = "0";
-}
-function closemenu() {
-    sidemenu.style.right = "-200px";
-}
+const typeText = document.getElementById("typewriter");
+typeWriterEffect(typeText, "UI/UX Designer | Web Developer");
+
+// ===== Contact Form =====
+const form = document.getElementById("contactForm");
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  msg.innerHTML = "Message sent successfully!";
+  setTimeout(() => msg.innerHTML = "", 4000);
+  form.reset();
+});

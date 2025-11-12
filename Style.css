@@ -14,20 +14,25 @@ body {
   background-color: #080808;
   color: #fff;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
-  padding: 10px 10%;
+  padding: 10px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header Styles */
 #header {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80");
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 nav {
@@ -36,6 +41,13 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.9);
+  padding: 15px 5%;
   animation: fadeInDown 1s ease;
 }
 
@@ -59,6 +71,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 16px;
   position: relative;
+  transition: color 0.3s;
 }
 
 nav ul li a::after {
@@ -76,19 +89,31 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .header-text {
-  margin-top: 20%;
+  margin-top: 80px;
   font-size: 24px;
   animation: fadeInUp 1s ease;
+  max-width: 600px;
 }
 
 .header-text h1 {
   font-size: 48px;
-  margin-top: 20px;
+  margin: 20px 0;
+  line-height: 1.2;
 }
 
 .header-text h1 span {
   color: #ff004f;
+}
+
+.header-text .btn {
+  margin-top: 30px;
 }
 
 /* Typewriter effect */
@@ -186,7 +211,7 @@ nav ul li a:hover::after {
 
 /* ---------About------------ */
 #about {
-  padding: 80px 0;
+  padding: 100px 0;
   color: #ababab;
   animation: fadeInUp 1s ease;
 }
@@ -195,10 +220,12 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .about-col-1 {
-  flex-basis: 35%;
+  flex: 1;
+  min-width: 300px;
   animation: fadeInLeft 1s ease;
 }
 
@@ -213,7 +240,8 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 {
-  flex-basis: 60%;
+  flex: 2;
+  min-width: 300px;
   animation: fadeInRight 1s ease;
 }
 
@@ -221,21 +249,24 @@ nav ul li a:hover::after {
   font-size: 48px;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 30px 0;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .tab-links {
-  margin-right: 50px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
   transition: color 0.3s;
+  padding: 10px 0;
 }
 
 .tab-links:hover {
@@ -254,18 +285,19 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-  width: 50%;
+  width: 100%;
 }
 
 .tab-contains ul li {
   list-style-type: none;
-  margin: 10px 0;
+  margin: 15px 0;
   animation: fadeInUp 0.5s ease;
 }
 
 .tab-contains ul li span {
   color: #b54769;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .tab-contains {
@@ -279,7 +311,7 @@ nav ul li a:hover::after {
 
 /* --------------Technical Skills----------------- */
 #skills-overview {
-  padding: 80px 0;
+  padding: 100px 0;
   background: #111;
 }
 
@@ -338,7 +370,7 @@ nav ul li a:hover::after {
 
 /* --------------Services----------------- */
 #services {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .services-list {
@@ -356,6 +388,9 @@ nav ul li a:hover::after {
   border-radius: 10px;
   transition: all 0.5s;
   animation: zoomIn 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .services-list div i {
@@ -374,8 +409,9 @@ nav ul li a:hover::after {
   text-decoration: none;
   color: #fff;
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: auto;
   display: inline-block;
+  padding-top: 20px;
 }
 
 .services-list div:hover {
@@ -402,7 +438,7 @@ nav ul li a:hover::after {
 
 /* ---------Portfolio/Projects---------- */
 #portfolio {
-  padding: 80px 0;
+  padding: 100px 0;
   background: #111;
 }
 
@@ -419,14 +455,15 @@ nav ul li a:hover::after {
   overflow: hidden;
   background: #262626;
   animation: zoomIn 0.8s ease;
+  height: 300px;
 }
 
 .work img {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
-  height: 200px;
   object-fit: cover;
 }
 
@@ -451,12 +488,17 @@ nav ul li a:hover::after {
 
 .layer h3 {
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 20px;
 }
 
-.layer a {
+.project-links {
+  display: flex;
+  gap: 15px;
   margin-top: 20px;
+}
+
+.layer a {
   color: #ff004f;
   text-decoration: none;
   font-size: 18px;
@@ -467,7 +509,6 @@ nav ul li a:hover::after {
   border-radius: 50%;
   text-align: center;
   display: inline-block;
-  margin: 0 5px;
   transition: all 0.3s;
 }
 
@@ -507,9 +548,7 @@ nav ul li a:hover::after {
 }
 
 .btn {
-  display: block;
-  margin: 50px auto;
-  width: fit-content;
+  display: inline-block;
   border: 1px solid #ff004f;
   padding: 14px 50px;
   border-radius: 6px;
@@ -517,6 +556,8 @@ nav ul li a:hover::after {
   color: #fff;
   transition: all 0.5s;
   animation: fadeInUp 1s ease;
+  text-align: center;
+  font-weight: 500;
 }
 
 .btn:hover {
@@ -526,16 +567,18 @@ nav ul li a:hover::after {
 
 /* ------------------For CONTACT ------------- */
 #contact {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .contact-left {
-  flex-basis: 35%;
+  flex: 1;
+  min-width: 300px;
   animation: fadeInLeft 1s ease;
 }
 
 .contact-right {
-  flex-basis: 60%;
+  flex: 1;
+  min-width: 300px;
   animation: fadeInRight 1s ease;
 }
 
@@ -543,6 +586,7 @@ nav ul li a:hover::after {
   margin-top: 30px;
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 
 .contact-left p i {
@@ -553,12 +597,13 @@ nav ul li a:hover::after {
 
 .social-icons {
   margin-top: 30px;
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
-  margin-right: 15px;
   color: #ababab;
   display: inline-block;
   transition: all 0.5s;
@@ -573,6 +618,7 @@ nav ul li a:hover::after {
   display: inline-block;
   background: #ff004f;
   border: none;
+  margin-top: 20px;
 }
 
 .contact-right form {
@@ -633,98 +679,9 @@ nav .bi {
   cursor: pointer;
 }
 
-/* --------------CSS FOR SMALL SCREENS (MEDIA QUERY ) -------------------*/
-@media only screen and (max-width: 768px) {
-  .header-text {
-    margin-top: 50%;
-    font-size: 16px;
-  }
-
-  .header-text h1 {
-    font-size: 30px;
-  }
-
-  nav .bi {
-    display: block;
-  }
-
-  nav ul {
-    background: #ff004f;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding-top: 50px;
-    z-index: 2;
-    transition: right 0.5s;
-    flex-direction: column;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 25px;
-  }
-
-  nav ul .bi-x-circle-fill {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
-  
-  .sub-title {
-    font-size: 40px;
-  }
-  
-  .about-col-1, .about-col-2 {
-    flex-basis: 100%;
-  }
-  
-  .about-col-1 {
-    margin-bottom: 30px;
-  }
-  
-  .about-col-2 {
-    font-size: 14px;
-  }
-  
-  .tab-links {
-    font-size: 16px;
-    margin-right: 20px;
-  }
-  
-  .contact-left, .contact-right {
-    flex-basis: 100%;
-  }
-  
-  .copyright {
-    font-size: 14px;
-  }
-  
-  .skills-list {
-    grid-template-columns: 1fr;
-  }
-  
-  .work-list {
-    grid-template-columns: 1fr;
-  }
-  
-  .services-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-#msg {
-  color: #61b752;
-  margin-top: 10px;
-  display: block;
-  animation: fadeInUp 0.5s ease;
-}
-
 /* === Achievement Section === */
 #achievements {
-  padding: 80px 0;
+  padding: 100px 0;
   background: #111;
   text-align: center;
 }
@@ -764,7 +721,7 @@ nav .bi {
 
 /* === Certificates Section === */
 #certificates {
-  padding: 80px 0;
+  padding: 100px 0;
   background: #080808;
   text-align: center;
 }
@@ -817,7 +774,6 @@ nav .bi {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
-  margin-left: 15px;
   align-self: center;
 }
 
@@ -835,7 +791,173 @@ nav .bi {
   color: #000;
 }
 
-/* Additional smooth transition */
-body, nav ul li a, .header-text, .about-col-2 p {
-  transition: color 0.3s ease, background-color 0.3s ease;
+.light-theme .logo {
+  color: #000;
+}
+
+.light-theme .sub-title {
+  color: #000;
+}
+
+.light-theme .skill-category,
+.light-theme .services-list div,
+.light-theme .work,
+.light-theme .achievement-card,
+.light-theme .certificate-card {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.light-theme .skill {
+  background: #ddd;
+  color: #000;
+}
+
+.light-theme form input,
+.light-theme form textarea {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.light-theme .copyright {
+  background: #f0f0f0;
+  color: #000;
+}
+
+#msg {
+  color: #61b752;
+  margin-top: 10px;
+  display: block;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* --------------CSS FOR SMALL SCREENS (MEDIA QUERY ) -------------------*/
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px 20px;
+  }
+  
+  nav {
+    padding: 15px 20px;
+  }
+  
+  .header-text {
+    margin-top: 120px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  nav .bi {
+    display: block;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .bi-x-circle-fill {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  
+  .sub-title {
+    font-size: 40px;
+  }
+  
+  .about-col-1, .about-col-2 {
+    flex-basis: 100%;
+  }
+  
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  
+  .about-col-2 {
+    font-size: 14px;
+  }
+  
+  .tab-titles {
+    justify-content: center;
+  }
+  
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .contact-left, .contact-right {
+    flex-basis: 100%;
+  }
+  
+  .copyright {
+    font-size: 14px;
+  }
+  
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificate-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-right {
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-text h1 {
+    font-size: 24px;
+  }
+  
+  .sub-title {
+    font-size: 32px;
+  }
+  
+  .tab-titles {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .skills-container {
+    justify-content: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
 }

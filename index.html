@@ -1,479 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankit Singh - Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="Style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr.css">
+</head>
+<body>
     <!-- Header -->
     <div id="header">
-      <div class="container">
-        <nav>
-          <div class="logo">Ankit Singh</div>
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills-overview">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="bi bi-x-circle-fill" onclick="closeMenu()"></i>
-          </ul>
-          <div class="nav-right">
-            <button id="theme-toggle" class="theme-btn">🌙</button>
-            <i class="bi bi-list" onclick="openMenu()"></i>
-          </div>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">Ankit Singh</div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills-overview">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="bi bi-x-circle-fill" onclick="closeMenu()"></i>
+                </ul>
+                <div class="nav-right">
+                    <button id="theme-toggle" class="theme-btn">🌙</button>
+                    <i class="bi bi-list" onclick="openMenu()"></i>
+                </div>
+            </nav>
 
-        <div class="header-text">
-          <p id="typewriter">Full Stack Developer & Problem Solver</p>
-          <h1>Hi, I'm <span>Ankit</span> Singh From India</h1>
-          <a href="#contact" class="btn">Get In Touch</a>
+            <div class="header-text">
+                <p id="typewriter"></p>
+                <h1>Hi, I'm <span>Ankit</span> Singh From India</h1>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
         </div>
-      </div>
     </div>
+
+    
 
     <!-- About -->
     <div id="about">
-      <div class="container">
-        <h1 class="sub-title">About Me</h1>
-        <div class="row">
-          <div class="about-col-1">
-            <img src="Bak.jpg" alt="Ankit Singh" />
-          </div>
-          <div class="about-col-2">
-            <p>
-              I am Ankit Singh Rawat from Uttarakhand, currently pursuing BCA at
-              GEHU Dehradun. Passionate about Web Development, Problem Solving,
-              and building real-world applications. Always motivated to learn
-              new technologies and improve my skills.
-            </p>
+        <div class="container">
+            <h1 class="sub-title">About Me</h1>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Bak.jpg" alt="Ankit Singh" />
+                </div>
+                <div class="about-col-2">
+                    <p>
+                        I am Ankit Singh Rawat from Uttarakhand, currently pursuing BCA at
+                        GEHU Dehradun. Passionate about Web Development, Problem Solving,
+                        and building real-world applications. Always motivated to learn
+                        new technologies and improve my skills.
+                    </p>
 
-            <div class="tab-titles">
-              <p class="tab-links active-link" data-tab="skills">Skills</p>
-              <p class="tab-links" data-tab="experience">Experience</p>
-              <p class="tab-links" data-tab="education">Education</p>
-            </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" data-tab="skills">Skills</p>
+                        <p class="tab-links" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                    </div>
 
-            <div class="tab-contains active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Frontend Development</span><br />HTML, CSS, JavaScript,
-                  React, TypeScript
-                </li>
-                <li>
-                  <span>Backend Development</span><br />Node.js, Express.js,
-                  MongoDB, REST APIs
-                </li>
-                <li>
-                  <span>Programming Languages</span><br />Java, C, C++, Python,
-                  JavaScript
-                </li>
-                <li>
-                  <span>Tools & Technologies</span><br />Git, GitHub, VS Code,
-                  Postman
-                </li>
-              </ul>
-            </div>
+                    <div class="tab-contains active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Frontend Development</span><br />HTML, CSS, JavaScript,
+                                React, TypeScript
+                            </li>
+                            <li>
+                                <span>Backend Development</span><br />Node.js, Express.js,
+                                MongoDB, REST APIs
+                            </li>
+                            <li>
+                                <span>Programming Languages</span><br />Java, C, C++, Python,
+                                JavaScript
+                            </li>
+                            <li>
+                                <span>Tools & Technologies</span><br />Git, GitHub, VS Code,
+                                Postman
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="tab-contains" id="experience">
-              <ul>
-                <li>
-                  <span>2024 - Current</span><br />Full Stack Development & DSA
-                </li>
-                <li>
-                  <span>2024</span><br />Built multiple web applications and
-                  tools
-                </li>
-                <li><span>2025</span><br />Academic Projects at GEHU</li>
-                <li><span>2026</span><br />Seeking internship opportunities</li>
-              </ul>
-            </div>
+                    <div class="tab-contains" id="experience">
+                        <ul>
+                            <li>
+                                <span>2024 - Current</span><br />Full Stack Development & DSA
+                            </li>
+                            <li>
+                                <span>2024</span><br />Built multiple web applications and
+                                tools
+                            </li>
+                            <li><span>2025</span><br />Academic Projects at GEHU</li>
+                            <li><span>2026</span><br />Seeking internship opportunities</li>
+                        </ul>
+                    </div>
 
-            <div class="tab-contains" id="education">
-              <ul>
-                <li><span>2021</span><br />10th from UK Board</li>
-                <li><span>2023</span><br />12th from UK Board</li>
-                <li><span>2023-2026</span><br />BCA from GEHU Dehradun</li>
-              </ul>
+                    <div class="tab-contains" id="education">
+                        <ul>
+                            <li><span>2021</span><br />10th from UK Board</li>
+                            <li><span>2023</span><br />12th from UK Board</li>
+                            <li><span>2023-2026</span><br />BCA from GEHU Dehradun</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- Technical Skills Section -->
     <div id="skills-overview">
-      <div class="container">
-        <h1 class="sub-title">Technical Skills</h1>
-        <div class="skills-list">
-          <div class="skill-category">
-            <h2><i class="fas fa-laptop-code"></i> Programming Languages</h2>
-            <div class="skills-container">
-              <div class="skill">C</div>
-              <div class="skill">C++</div>
-              <div class="skill">Java</div>
-              <div class="skill">JavaScript</div>
-              <div class="skill">Python</div>
-              <div class="skill">TypeScript</div>
+        <div class="container">
+            <h1 class="sub-title">Technical Skills</h1>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <h2><i class="fas fa-laptop-code"></i> Programming Languages</h2>
+                    <div class="skills-container">
+                        <div class="skill">C</div>
+                        <div class="skill">C++</div>
+                        <div class="skill">Java</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">Python</div>
+                        <div class="skill">TypeScript</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h2><i class="fas fa-globe"></i> Web Technologies</h2>
+                    <div class="skills-container">
+                        <div class="skill">HTML5</div>
+                        <div class="skill">CSS3</div>
+                        <div class="skill">React.js</div>
+                        <div class="skill">Node.js</div>
+                        <div class="skill">Express.js</div>
+                        <div class="skill">MongoDB</div>
+                        <div class="skill">REST APIs</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h2><i class="fas fa-tools"></i> Tools & Other</h2>
+                    <div class="skills-container">
+                        <div class="skill">Git & GitHub</div>
+                        <div class="skill">Data Structures</div>
+                        <div class="skill">Algorithms</div>
+                        <div class="skill">Problem Solving</div>
+                        <div class="skill">VS Code</div>
+                        <div class="skill">Postman</div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="skill-category">
-            <h2><i class="fas fa-globe"></i> Web Technologies</h2>
-            <div class="skills-container">
-              <div class="skill">HTML5</div>
-              <div class="skill">CSS3</div>
-              <div class="skill">React.js</div>
-              <div class="skill">Node.js</div>
-              <div class="skill">Express.js</div>
-              <div class="skill">MongoDB</div>
-              <div class="skill">REST APIs</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h2><i class="fas fa-tools"></i> Tools & Other</h2>
-            <div class="skills-container">
-              <div class="skill">Git & GitHub</div>
-              <div class="skill">Data Structures</div>
-              <div class="skill">Algorithms</div>
-              <div class="skill">Problem Solving</div>
-              <div class="skill">VS Code</div>
-              <div class="skill">Postman</div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- Services -->
     <div id="services">
-      <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fas fa-code"></i>
-            <h2>Full Stack Development</h2>
-            <p>
-              Building complete web applications with frontend and backend using
-              MERN stack.
-            </p>
-            <a href="https://github.com/ankitsingh2004">View Projects</a>
-          </div>
-          <div>
-            <i class="fas fa-crop"></i>
-            <h2>Problem Solving</h2>
-            <p>
-              Solving complex problems using Data Structures and Algorithms in
-              Java/C++.
-            </p>
-            <a href="https://leetcode.com/u/Rawatanki/">LeetCode Profile</a>
-          </div>
-          <div>
-            <i class="fab fa-app-store-ios"></i>
-            <h2>Web Applications</h2>
-            <p>
-              Creating responsive and interactive web applications with modern
-              technologies.
-            </p>
-            <a href="https://github.com/ankitsingh2004">Explore Code</a>
-          </div>
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Full Stack Development</h2>
+                    <p>
+                        Building complete web applications with frontend and backend using
+                        MERN stack.
+                    </p>
+                    <a href="https://github.com/ankitsingh2004">View Projects</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop"></i>
+                    <h2>Problem Solving</h2>
+                    <p>
+                        Solving complex problems using Data Structures and Algorithms in
+                        Java/C++.
+                    </p>
+                    <a href="https://leetcode.com/u/Rawatanki/">LeetCode Profile</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store-ios"></i>
+                    <h2>Web Applications</h2>
+                    <p>
+                        Creating responsive and interactive web applications with modern
+                        technologies.
+                    </p>
+                    <a href="https://github.com/ankitsingh2004">Explore Code</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Portfolio -->
     <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <div class="work-list">
-          <!-- Real-time Collaboration Editor -->
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Collaboration Editor"
-            />
-            <div class="layer">
-              <h3>Real-time Collaboration Editor</h3>
-              <p>
-                A collaborative code/text editor where multiple users can edit
-                simultaneously with live updates.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Socket.io</span>
-                <span class="tech-tag">MongoDB</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ankitsingh2004/collaboration-editor"
-                  title="GitHub"
-                  ><i class="bi bi-github"></i
-                ></a>
-                <a href="#" class="live-demo" title="Live Demo"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <!-- Real-time Collaboration Editor -->
+                <div class="work">
+                    <img
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Collaboration Editor"
+                    />
+                    <div class="layer">
+                        <h3>Real-time Collaboration Editor</h3>
+                        <p>
+                            A collaborative code/text editor where multiple users can edit
+                            simultaneously with live updates.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ankitsingh2004/collaboration-editor"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a href="#" class="live-demo" title="Live Demo"
+                                ><i class="fas fa-external-link-alt"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Process Management Tool -->
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Process Management Tool"
-            />
-            <div class="layer">
-              <h3>Process Management & CPU Scheduling Tool</h3>
-              <p>
-                A Python-based system that monitors running processes, manages
-                system resources using psutil, and implements CPU scheduling
-                algorithms.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">psutil</span>
-                <span class="tech-tag">CPU Scheduling</span>
-                <span class="tech-tag">System Monitoring</span>
-                <span class="tech-tag">Algorithms</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ankitsingh2004/process-manager"
-                  title="GitHub"
-                  ><i class="bi bi-github"></i
-                ></a>
-                <a href="#" class="live-demo" title="View Code"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+                <!-- Process Management Tool -->
+                <div class="work">
+                    <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Process Management Tool"
+                    />
+                    <div class="layer">
+                        <h3>Process Management & CPU Scheduling Tool</h3>
+                        <p>
+                            A Python-based system that monitors running processes, manages
+                            system resources using psutil, and implements CPU scheduling
+                            algorithms.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">psutil</span>
+                            <span class="tech-tag">CPU Scheduling</span>
+                            <span class="tech-tag">System Monitoring</span>
+                            <span class="tech-tag">Algorithms</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ankitsingh2004/process-manager"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a href="#" class="live-demo" title="View Code"
+                                ><i class="fas fa-external-link-alt"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Expense Tracker Website -->
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Expense Tracker"
-            />
-            <div class="layer">
-              <h3>Expense Tracker</h3>
-              <p>
-                A full-stack expense tracking application with categorization,
-                charts, and budget planning.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://expense-tracker-nu-bay.vercel.app/"
-                  title="Project"
-                  ><i class="bi bi-github"></i
-                ></a>
-                <a href="#" class="live-demo" title="Live Demo"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+                <!-- Expense Tracker Website -->
+                <div class="work">
+                    <img
+                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Expense Tracker"
+                    />
+                    <div class="layer">
+                        <h3>Expense Tracker</h3>
+                        <p>
+                            A full-stack expense tracking application with categorization,
+                            charts, and budget planning.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://expense-tracker-nu-bay.vercel.app/"
+                                title="Project"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a href="#" class="live-demo" title="Live Demo"
+                                ><i class="fas fa-external-link-alt"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Todo List Application -->
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Todo List App"
-            />
-            <div class="layer">
-              <h3>Advanced Todo List</h3>
-              <p>
-                A feature-rich todo application with categories, priorities, due
-                dates, and progress tracking.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">HTML/CSS</span>
-                <span class="tech-tag">Local Storage</span>
-                <span class="tech-tag">Responsive UI</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ankitsingh2004/Advance-Todo-List"
-                  title="GitHub"
-                  ><i class="bi bi-github"></i
-                ></a>
-                <a
-                  href="https://github.com/ankitsingh2004/Advance-Todo-List"
-                  class="live-demo"
-                  title="Live Demo"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+                <!-- Todo List Application -->
+                <div class="work">
+                    <img
+                        src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Todo List App"
+                    />
+                    <div class="layer">
+                        <h3>Advanced Todo List</h3>
+                        <p>
+                            A feature-rich todo application with categories, priorities, due
+                            dates, and progress tracking.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Local Storage</span>
+                            <span class="tech-tag">Responsive UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ankitsingh2004/Advance-Todo-List"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a
+                                href="https://github.com/ankitsingh2004/Advance-Todo-List"
+                                class="live-demo"
+                                title="Live Demo"
+                                ><i class="fas fa-external-link-alt"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Weather Application -->
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Weather App"
-            />
-            <div class="layer">
-              <h3>Weather App</h3>
-              <p>
-                A responsive weather application with location detection,
-                forecasts, and beautiful UI.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">API Integration</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">Geolocation</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ankitsingh2004/weather-app"
-                  title="GitHub"
-                  ><i class="bi bi-github"></i
-                ></a>
-                <a href="#" class="live-demo" title="Live Demo"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+                <!-- Weather Application -->
+                <div class="work">
+                    <img
+                        src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Weather App"
+                    />
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>
+                            A responsive weather application with location detection,
+                            forecasts, and beautiful UI.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Geolocation</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ankitsingh2004/weather-app"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a href="#" class="live-demo" title="Live Demo"
+                                ><i class="fas fa-external-link-alt"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Java/C++ Projects -->
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Java C++ Projects"
-            />
-            <div class="layer">
-              <h3>Java & C++ Applications</h3>
-              <p>
-                Various desktop applications and algorithms implemented in Java
-                and C++.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">OOP</span>
-                <span class="tech-tag">Data Structures</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ankitsingh2004/DSAwithCpp"
-                  title="GitHub"
-                  ><i class="bi bi-github"></i
-                ></a>
-                <a
-                  href="https://github.com/ankitsingh2004/DSAwithCpp"
-                  class="live-demo"
-                  title="View Code"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
+                <!-- Java/C++ Projects -->
+                <div class="work">
+                    <img
+                        src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Java C++ Projects"
+                    />
+                    <div class="layer">
+                        <h3>Java & C++ Applications</h3>
+                        <p>
+                            Various desktop applications and algorithms implemented in Java
+                            and C++.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ankitsingh2004/DSAwithCpp"
+                                title="GitHub"
+                                ><i class="bi bi-github"></i
+                            ></a>
+                            <a
+                                href="https://github.com/ankitsingh2004/DSAwithCpp"
+                                class="live-demo"
+                                title="View Code"
+                                ><i class="fas fa-external-link-alt"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <a href="https://github.com/ankitsingh2004" class="btn"
+                >View More on GitHub</a
+            >
         </div>
-        <a href="https://github.com/ankitsingh2004" class="btn"
-          >View More on GitHub</a
-        >
-      </div>
     </div>
+    
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h1 class="sub-title">Achievements</h1>
+            <div class="achievement-list">
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Young Turks25</h3>
+                    <p>Round 1 Achievement Certificate</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Training Certificate from NullClass</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-users"></i>
+                    <h3>NaukriCampus</h3>
+                    <p>Participation Certificate</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Coursera Certificate</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Certificates Section -->
     <section id="certificates">
-      <div class="container">
-        <h1 class="sub-title">Certificates</h1>
-        <div class="certificate-gallery">
-          <div class="certificate-card">
-            <img src="young_turks25_round_1_achievement_page-0001.jpg" alt="Certificate 1" />
-            <p>Young Turks25 Round1 Achievement Certificate</p>
-          </div>
-          <div class="certificate-card">
-            <img src="NullClass-undefined-Training-Certificate (1).png" alt="Certificate 2" />
-            <p>Web Dev Training certificate</p>
-          </div>
-          <div class="certificate-card">
-            <img src="NaukriCampus_Certificate_Participation_page-0001.jpg" alt="Certificate 3" />
-            <p>NaukriCampus Participation Certificate</p>
-          </div>
-          <div class="certificate-card">
-            <img src="Coursera.jpg" alt="Certificate 4" />
-            <p>Machine Learning</p>
-          </div>
+        <div class="container">
+            <h1 class="sub-title">Certificates</h1>
+            <div class="certificate-gallery">
+                <div class="certificate-card">
+                    <img src="young_turks25_round_1_achievement_page-0001.jpg" alt="Certificate 1" />
+                    <p>Young Turks25 Round1 Achievement Certificate</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="NullClass-undefined-Training-Certificate (1).png" alt="Certificate 2" />
+                    <p>Web Dev Training certificate</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="NaukriCampus_Certificate_Participation_page-0001.jpg" alt="Certificate 3" />
+                    <p>NaukriCampus Participation Certificate</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="Coursera.jpg" alt="Certificate 4" />
+                    <p>Machine Learning</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Contact -->
     <div id="contact">
-      <div class="container">
-        <h1 class="sub-title">Contact Me</h1>
-        <div class="row">
-          <div class="contact-left">
-            <p><i class="bi bi-send-fill"></i> as5806801@gmail.com</p>
-            <p><i class="bi bi-telephone-fill"></i> 8077150000</p>
-            <div class="social-icons">
-              <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="https://github.com/ankitsingh2004"
-                ><i class="bi bi-github"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/ankit-singh-55154b311/"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-            </div>
-            <a href="Resume.pdf" download class="btn btn2">Download CV</a>
-          </div>
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p><i class="bi bi-send-fill"></i> as5806801@gmail.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> 8077150000</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="https://github.com/ankitsingh2004"
+                            ><i class="bi bi-github"></i
+                        ></a>
+                        <a href="https://www.linkedin.com/in/ankit-singh-55154b311/"
+                            ><i class="bi bi-linkedin"></i
+                        ></a>
+                    </div>
+                    <a href="Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
 
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your email"
-                required
-              />
-              <textarea
-                name="Message"
-                placeholder="Your message"
-                rows="6"
-                required
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
-          </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required />
+                        <input
+                            type="email"
+                            name="Email"
+                            placeholder="Your email"
+                            required
+                        />
+                        <textarea
+                            name="Message"
+                            placeholder="Your message"
+                            rows="6"
+                            required
+                        ></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="copyright">
-        <p>© 2025 Ankit Singh. Crafted with <i class="bi bi-heart-fill"></i></p>
-      </div>
+        <div class="copyright">
+            <p>© 2025 Ankit Singh. Crafted with <i class="bi bi-heart-fill"></i></p>
+        </div>
     </div>
 
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  </body>
+    <script src="anki.js"></script>
+</body>
 </html>

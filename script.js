@@ -618,15 +618,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach(observeReveal);
 
   /* ---------------------------------------------------------
-     Contact form: validation + EmailJS
+     Contact form: validation + submit to Google Sheet
+     via Google Apps Script Web App (no backend needed).
   --------------------------------------------------------- */
   (function initContact() {
-    // TODO: replace with your own EmailJS credentials (emailjs.com — free tier).
-    // Create a Service + Template, then paste the IDs below. Template variables
-    // expected: from_name, from_email, message.
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    // Your Google Apps Script Web App URL — this is what writes each
+    // submission as a new row into your Google Sheet.
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzeo8tzK8aTT5CGrrcaDuFi9aVi35B8ljzrS-AoZNAic3DP6zsAfpZpZ1dXPAz99QzK/exec';
 
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -672,16 +670,10 @@ document.addEventListener('DOMContentLoaded', () => {
       btnText.hidden = true; btnSending.hidden = false;
 
       try {
-        if (EMAILJS_SERVICE_ID.startsWith('YOUR_') || typeof emailjs === 'undefined') {
-          // Credentials not configured yet — simulate success so the UI can be previewed.
-          await new Promise(r => setTimeout(r, 900));
-        } else {
-          await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-            from_name: document.getElementById('fname').value,
-            from_email: document.getElementById('femail').value,
-            message: document.getElementById('fmessage').value,
-          }, EMAILJS_PUBLIC_KEY);
-        }
+        // Apps Script web apps don't send CORS headers, so the request must
+        // use mode: 'no-cors'. That means we can't read the response body —
+        // but as long as the request reaches Google, the row gets written.
+        await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: new FormData(form) });
         showMsg('✅ Message sent — thanks for reaching out!', 'success');
         form.reset();
       } catch (err) {

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
 
     education: [
-      { period: '2026 – 2028', title: 'MCA — Master of Computer Applications', org: 'GEHU Dehradun',
+      { period: '2026 – 2028', title: 'MCA — Master of Computer Applications', org: 'GEU Dehradun',
         detail: 'Advanced coursework in software architecture, distributed systems and applied algorithms.', current: true },
       { period: '2023 – 2026', title: 'BCA — Bachelor of Computer Applications', org: 'GEHU Dehradun',
         detail: 'Specialised in web and software development. Built multiple MERN stack projects during the program.' },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
 
     experience: [
-      { title: 'AI/ML Internship', org: 'AI/ML Internship Program', period: '2025',
+      { title: 'AI/ML Internship', org: 'AI/ML Internship Program', period: '2026',
         detail: 'Worked on applied machine learning tasks and AI-driven solutions, strengthening my Python and ML fundamentals.',
         icon: 'brain', file: 'AIML_Internship_2.pdf' },
       { title: 'Web Development Internship', org: 'Internship Program', period: '2025',
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { title: 'AI Intelligence Attendance System', category: 'ai', tags: ['Python', 'Computer Vision', 'AI'],
         desc: 'An AI-powered attendance system that identifies people automatically and records attendance, removing manual roll calls.',
         image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=700&q=80',
-        github: 'https://github.com/ankitsingh2004' }, // TODO: replace with the exact repo link
+        github: 'https://github.com/ankitsingh2004' },
       { title: 'Real-time Collaboration Editor', category: 'fullstack', tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
         desc: 'A collaborative editor where multiple users edit at once, with live sync, presence indicators and conflict resolution.',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80',
